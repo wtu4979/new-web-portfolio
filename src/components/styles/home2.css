@@ -303,4 +303,20 @@
 	.linkedin p {
 		padding-left: 1rem;
 	}
+
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-left: 4rem;
+	}
+
+	.contact-container h2 {
+		font-size: 25px;
+	}
+
+	.contact-info-container p {
+		font-size: 15px;
+	}
 }
