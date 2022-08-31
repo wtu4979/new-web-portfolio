@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/new-web-portfolio/static/css/main.aa1a12de.css",
-    "main.js": "/new-web-portfolio/static/js/main.9ba80134.js",
-    "static/media/SegoeUIVF.ttf": "/new-web-portfolio/static/media/SegoeUIVF.142593ecca549715e938.ttf",
-    "static/media/Segoe-UI-Bold.ttf": "/new-web-portfolio/static/media/Segoe-UI-Bold.b00928e669b804136004.ttf",
-    "static/media/csuf.png": "/new-web-portfolio/static/media/csuf.90fe5ed207453431a044.png",
-    "static/media/teder.jpg": "/new-web-portfolio/static/media/teder.1f72295fe0e1aefc3056.jpg",
-    "static/media/c1.jpg": "/new-web-portfolio/static/media/c1.eb5eacafc66beb680d80.jpg",
-    "index.html": "/new-web-portfolio/index.html",
-    "main.aa1a12de.css.map": "/new-web-portfolio/static/css/main.aa1a12de.css.map",
-    "main.9ba80134.js.map": "/new-web-portfolio/static/js/main.9ba80134.js.map"
+    "main.css": "/static/css/main.a44bf528.css",
+    "main.js": "/static/js/main.7a9b9fe1.js",
+    "static/media/SegoeUIVF.ttf": "/static/media/SegoeUIVF.142593ecca549715e938.ttf",
+    "static/media/Segoe-UI-Bold.ttf": "/static/media/Segoe-UI-Bold.b00928e669b804136004.ttf",
+    "static/media/csuf.png": "/static/media/csuf.90fe5ed207453431a044.png",
+    "static/media/teder.jpg": "/static/media/teder.1f72295fe0e1aefc3056.jpg",
+    "static/media/c1.jpg": "/static/media/c1.eb5eacafc66beb680d80.jpg",
+    "index.html": "/index.html",
+    "main.a44bf528.css.map": "/static/css/main.a44bf528.css.map",
+    "main.7a9b9fe1.js.map": "/static/js/main.7a9b9fe1.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa1a12de.css",
-    "static/js/main.9ba80134.js"
+    "static/css/main.a44bf528.css",
+    "static/js/main.7a9b9fe1.js"
   ]
 }
