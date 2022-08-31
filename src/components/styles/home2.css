@@ -137,6 +137,125 @@
 	background-color: rgba(39, 44, 47, 0.2);
 }
 
+.contact-container {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+
+.contact-info-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.email {
+	display: flex;
+	cursor: pointer;
+}
+
+.email p {
+	margin: 0;
+	padding-left: 1rem;
+}
+
+.email img {
+	max-width: 20px;
+	max-height: 20px;
+}
+
+.email-copy-icon {
+	max-width: 15px !important;
+	max-height: 15px !important;
+	padding-left: 0.5rem;
+}
+.linkedin {
+	display: flex;
+	padding-left: 2rem;
+	cursor: pointer;
+}
+
+.linkedin a {
+	text-decoration: none;
+	color: black;
+}
+
+.linkedin p {
+	margin: 0;
+	padding-left: 0.5rem;
+}
+
+.linkedin img {
+	max-width: 20px;
+	max-height: 20px;
+}
+
+.resume-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4rem;
+}
+.resume-container a:link {
+	text-decoration: none !important;
+}
+.resume-button {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(178, 204, 239, 0.5);
+	max-width: 200px;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.coffee-button {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(178, 204, 239, 0.5);
+	max-width: 200px;
+	border-radius: 20px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	padding: 16px;
+	margin-left: 1rem;
+}
+
+.coffee-button p {
+	padding: 0;
+	margin: 0;
+	padding-right: 10px;
+	padding-left: 4px;
+	font-family: 'boldText';
+	text-decoration: none;
+	color: black;
+}
+
+.resume-button:hover {
+	background-color: rgba(178, 204, 239, 1);
+}
+
+.resume-button p {
+	padding: 0;
+	margin: 0;
+	padding-right: 10px;
+	padding-left: 4px;
+	font-family: 'boldText';
+	text-decoration: none;
+	color: black;
+}
+
+.resume-button img {
+	max-width: 35px;
+	max-height: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
 @media screen and (max-width: 715px) {
 	.home-container {
 		zoom: 0.8;
@@ -156,5 +275,32 @@
 	.education-box-left img {
 		max-width: 60px;
 		max-height: 60px;
+	}
+	.contact-info-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.linkedin {
+		margin-top: 1rem;
+		padding: 0;
+	}
+
+	.email img {
+		max-width: 25px;
+		max-height: 25px;
+	}
+
+	.email p {
+		padding-left: 1rem;
+	}
+
+	.linkedin img {
+		max-width: 25px;
+		max-height: 25px;
+	}
+
+	.linkedin p {
+		padding-left: 1rem;
 	}
 }

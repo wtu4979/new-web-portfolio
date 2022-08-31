@@ -5,6 +5,10 @@ import c1 from './assets/c1.jpg';
 import teder from './assets/teder.jpg';
 import onntek from './assets/onntek.jpg';
 import csuf from './assets/csuf.png';
+import gmail from './assets/gmail.png';
+import linkedin from './assets/linkedin.png';
+import github from './assets/github.png';
+import resume from './assets/resume.png';
 
 function Home2() {
 	return (
@@ -180,6 +184,44 @@ function Home2() {
 								codebase by implementing memoization and code splitting to
 								decrease application load time by 20%.
 							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className='resume-container'>
+					<a href={require('./assets/Wilson-Tu-Resume.pdf')} target='_blank'>
+						<div className='resume-button'>
+							<img src={resume}></img>
+							<p>Take My Resume!</p>
+						</div>
+					</a>
+
+					<a href={'https://www.buymeacoffee.com/wilsontu'} target='_blank'>
+						<div className='coffee-button'>
+							<p>☕ Buy Me Coffee!</p>
+						</div>
+					</a>
+				</div>
+
+				<div className='contact-container'>
+					<h2>📱 Contact Me</h2>
+					<div className='contact-info-container'>
+						<div className='email'>
+							<img src={gmail}></img>
+							<p>wilsontu4979@gmail.com</p>
+						</div>
+						<div className='linkedin'>
+							<img src={linkedin}></img>
+							<a href='https://www.linkedin.com/in/wilson-tu/' target='_blank'>
+								<p>linkedin.com/in/wilson-tu/</p>
+							</a>
+						</div>
+
+						<div className='linkedin'>
+							<img src={github}></img>
+							<a href='https://github.com/wtu4979' target='_blank'>
+								<p>github.com/wtu4979</p>
+							</a>
 						</div>
 					</div>
 				</div>
