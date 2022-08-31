@@ -28,7 +28,7 @@ function Home2() {
 					always eager to learn and expand my knowledge of different
 					technologies.
 				</p>
-				<p></p>
+				<br></br>
 				<p>
 					Currently interested in Web3.0 and Defi blockchain technology. I am
 					working towards getting AWS Cloud Practioner certified!
