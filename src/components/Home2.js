@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/home2.css';
 import 'animate.css';
 import c1 from './assets/c1.jpg';
@@ -9,8 +9,30 @@ import gmail from './assets/gmail.png';
 import linkedin from './assets/linkedin.png';
 import github from './assets/github.png';
 import resume from './assets/resume.png';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+import { styled } from '@mui/material/styles';
 
 function Home2() {
+	const [toolTipName, setToolTipName] = React.useState('Copy');
+	const [toolTipPlacement, setToolTipPlacement] = React.useState('bottom');
+	const CustomWidthTooltip = styled(({ className, ...props }) => (
+		<Tooltip {...props} classes={{ popper: className }} />
+	))({
+		[`& .${tooltipClasses.tooltip}`]: {
+			maxWidth: 300,
+			maxHeight: 200,
+		},
+	});
+	const handleToolTip = () => {
+		setTimeout(() => {
+			setToolTipName('Copy');
+		}, 200);
+	};
+
+	useEffect(() => {
+		setToolTipName('Copy');
+	}, []);
+
 	return (
 		<div class='home-container'>
 			<div className='name-container'>
@@ -202,27 +224,41 @@ function Home2() {
 						</div>
 					</a>
 				</div>
+			</div>
+			<div className='contact-container'>
+				<h2>📱 Contact Me</h2>
+				<div className='contact-info-container'>
+					<div className='email'>
+						<img src={gmail}></img>
+						<CustomWidthTooltip
+							title={toolTipName}
+							placement={toolTipPlacement}
+						>
+							<button
+								onClick={() => {
+									navigator.clipboard.writeText('wilsontu4979@gmail.com');
+									setToolTipName('Email Copied!');
+								}}
+								onMouseLeave={() => {
+									handleToolTip();
+								}}
+							>
+								<p>wilsontu4979@gmail.com</p>
+							</button>
+						</CustomWidthTooltip>
+					</div>
+					<div className='linkedin'>
+						<img src={linkedin}></img>
+						<a href='https://www.linkedin.com/in/wilson-tu/' target='_blank'>
+							<p>linkedin.com/in/wilson-tu/</p>
+						</a>
+					</div>
 
-				<div className='contact-container'>
-					<h2>📱 Contact Me</h2>
-					<div className='contact-info-container'>
-						<div className='email'>
-							<img src={gmail}></img>
-							<p>wilsontu4979@gmail.com</p>
-						</div>
-						<div className='linkedin'>
-							<img src={linkedin}></img>
-							<a href='https://www.linkedin.com/in/wilson-tu/' target='_blank'>
-								<p>linkedin.com/in/wilson-tu/</p>
-							</a>
-						</div>
-
-						<div className='linkedin'>
-							<img src={github}></img>
-							<a href='https://github.com/wtu4979' target='_blank'>
-								<p>github.com/wtu4979</p>
-							</a>
-						</div>
+					<div className='linkedin'>
+						<img src={github}></img>
+						<a href='https://github.com/wtu4979' target='_blank'>
+							<p>github.com/wtu4979</p>
+						</a>
 					</div>
 				</div>
 			</div>
