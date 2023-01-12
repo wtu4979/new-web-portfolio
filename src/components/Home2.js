@@ -3,6 +3,8 @@ import "./styles/home2.css";
 import "animate.css";
 import c1 from "./assets/c1.jpg";
 import teder from "./assets/teder.jpg";
+import lpt from "./assets/lpt.jpeg";
+import webitect from "./assets/webitect.jpeg";
 import onntek from "./assets/onntek.jpg";
 import csuf from "./assets/csuf.png";
 import gmail from "./assets/gmail.png";
@@ -11,8 +13,9 @@ import github from "./assets/github.png";
 import resume from "./assets/resume.png";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 
-function Home2() {
+function Home2({ themeColorMode }) {
   const [toolTipName, setToolTipName] = React.useState("Copy");
   const [toolTipPlacement, setToolTipPlacement] = React.useState("bottom");
   const CustomWidthTooltip = styled(({ className, ...props }) => (
@@ -40,7 +43,11 @@ function Home2() {
           <span className="hero-name">Wilson Tu</span> 👋
         </h1>
       </div>
-      <div className="bio-container">
+      <div
+        className={
+          themeColorMode === "light" ? "bio-container" : "bio-container-dark"
+        }
+      >
         <p>
           I am a student at California State University, Fullerton majoring in
           Computer Science graduating in May 2023. I am actively searching for{" "}
@@ -72,6 +79,79 @@ function Home2() {
 
       <div className="work-experience-container">
         <h2>💻 Work Experience</h2>
+        <div className="job-container">
+          <div className="top-half">
+            <div className="company-logo">
+              <img src={webitect} />
+            </div>
+            <div className="role-location-date-description-container">
+              <p className="role-title">CEO & Founder</p>
+              <p>Webitect · Self-employed</p>
+              <p
+                style={{
+                  color: "#96999b",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                }}
+              >
+                Nov 2022 - Present
+              </p>
+              <p
+                style={{
+                  color: "#96999b",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                }}
+              >
+                Los Angeles, California, United States
+              </p>
+              <p className="job-description">
+                🌎 Building web solutions to help grow small businesses 🌱
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className={
+            themeColorMode === "light" ? "job-divider" : "job-divider-dark"
+          }
+        ></div>
+        <div className="job-container">
+          <div className="top-half">
+            <div className="company-logo">
+              <img src={lpt} />
+            </div>
+            <div className="role-location-date-description-container">
+              <p className="role-title">Software Engineer</p>
+              <p>LongPath Technologies, Inc. · Part-time</p>
+              <p
+                style={{
+                  color: "#96999b",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                }}
+              >
+                Oct 2022 - Present
+              </p>
+              <p
+                style={{
+                  color: "#96999b",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                }}
+              >
+                Boulder, Colorado, United States
+              </p>
+              <p className="job-description">Methane emissions stuff 💨</p>
+            </div>
+          </div>
+        </div>
+        <div
+          className={
+            themeColorMode === "light" ? "job-divider" : "job-divider-dark"
+          }
+        ></div>
+
         <div className="job-container">
           <div className="top-half">
             <div className="company-logo">
@@ -116,7 +196,11 @@ function Home2() {
             </div>
           </div>
         </div>
-        <div className="job-divider"></div>
+        <div
+          className={
+            themeColorMode === "light" ? "job-divider" : "job-divider-dark"
+          }
+        ></div>
         <div className="job-container">
           <div className="top-half">
             <div className="company-logo">
@@ -164,7 +248,11 @@ function Home2() {
             </div>
           </div>
         </div>
-        <div className="job-divider"></div>
+        <div
+          className={
+            themeColorMode === "light" ? "job-divider" : "job-divider-dark"
+          }
+        ></div>
         <div className="job-container">
           <div className="top-half">
             <div className="company-logo">
@@ -243,21 +331,27 @@ function Home2() {
                   handleToolTip();
                 }}
               >
-                <p>wilsontu4979@gmail.com</p>
+                <Typography paragraph="true" color="primary">
+                  wilsontu4979@gmail.com
+                </Typography>{" "}
               </button>
             </CustomWidthTooltip>
           </div>
           <div className="linkedin">
             <img src={linkedin}></img>
             <a href="https://www.linkedin.com/in/wilson-tu/" target="_blank">
-              <p>linkedin.com/in/wilson-tu/</p>
+              <Typography paragraph="true" color="primary">
+                linkedin.com/in/wilson-tu/
+              </Typography>
             </a>
           </div>
 
           <div className="linkedin">
             <img src={github}></img>
             <a href="https://github.com/wtu4979" target="_blank">
-              <p>github.com/wtu4979</p>
+              <Typography paragraph="true" color="primary">
+                github.com/wtu4979{" "}
+              </Typography>
             </a>
           </div>
         </div>
