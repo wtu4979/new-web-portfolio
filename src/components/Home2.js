@@ -106,7 +106,8 @@ function Home2({ themeColorMode }) {
 
 			<div className='name-container'>
 				<h1>
-					<span className='hero-name'>Wilson Tu</span> 👋
+					<span className='hero-name'>Wilson Tu</span>
+					<span class='wave'>👋</span>
 				</h1>
 			</div>
 			<div
