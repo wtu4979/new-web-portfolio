@@ -81,9 +81,7 @@ function Home2({ themeColorMode }) {
 
 	return (
 		<div class='home-container'>
-			<Alert severity='warning'>
-				Website development is in on-going progress...
-			</Alert>
+			<Alert severity='warning'>Website is still in development...</Alert>
 
 			<div className='name-container'>
 				<h1>
@@ -356,24 +354,6 @@ function Home2({ themeColorMode }) {
 							</p>
 						</div>
 					</div>
-				</div>
-
-				<div className='resume-container'>
-					<Document
-						file={resumePDF}
-						onLoadSuccess={onDocumentLoadSuccess}
-						options={{ workerSrc: '/pdf.worker.js' }}
-					>
-						{Array.from(new Array(numPages), (el, index) => (
-							<Page
-								key={`page_${index + 1}`}
-								pageNumber={index + 1}
-								renderTextLayer={false}
-								renderAnnotationLayer={false}
-								scale={1.2}
-							/>
-						))}
-					</Document>
 				</div>
 				<div className='download-button'>
 					<DownloadButton variant='outlined' onClick={handleDownloadResume}>
