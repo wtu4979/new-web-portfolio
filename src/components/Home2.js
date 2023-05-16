@@ -37,6 +37,27 @@ function Home2({ themeColorMode }) {
 	const [toolTipName, setToolTipName] = React.useState('Copy');
 	const [toolTipPlacement, setToolTipPlacement] = React.useState('bottom');
 	const [numPages, setNumPages] = useState(null);
+	const currentDate = new Date();
+	const longPathStartYear = 2022;
+	const longPathStartMonth = 10;
+	const webitectStartYear = 2022;
+	const webitectStartMonth = 11;
+	const currentYear = currentDate.getFullYear();
+	const currentMonth = currentDate.getMonth() + 1;
+
+	// Currently set for longpath
+	let longPathMonths;
+	longPathMonths = (currentYear - longPathStartYear) * 12;
+	longPathMonths -= longPathStartMonth;
+	longPathMonths += currentMonth;
+	longPathMonths = longPathMonths <= 0 ? 0 : longPathMonths;
+
+	// Currently set for Webitect
+	let webitectMonths;
+	webitectMonths = (currentYear - webitectStartYear) * 12;
+	webitectMonths -= webitectStartMonth;
+	webitectMonths += currentMonth;
+	webitectMonths = webitectMonths <= 0 ? 0 : webitectMonths;
 
 	const DownloadButton = styled(Button)(({ theme }) => ({
 		background: 'transparent',
@@ -94,18 +115,22 @@ function Home2({ themeColorMode }) {
 				}
 			>
 				<p>
-					I am a student at California State University, Fullerton majoring in
-					Computer Science graduating in May 2023. I am actively searching for{' '}
-					<span>New Grad 2023 Software Engineer</span> positions preferably in{' '}
-					<span>New York City</span>! I am passionate about software engineering
-					with an emphasis on full-stack development and AI/ML development. I am
-					always eager to learn and expand my knowledge of different
-					technologies.
+					🎓 I am currently pursuing a Master's degree in Computer Science,
+					specializing in Machine Learning, at the esteemed{' '}
+					<span>Georgia Institute of Technology</span>. Having recently
+					completed my undergraduate studies in Computer Science from California
+					State University, Fullerton 🎉, I have now embarked on my professional
+					journey as a Software Engineer based in <span>New York City</span> 🗽!
+					My passion lies in software engineering, particularly full-stack
+					development and AI/ML development 💡. Driven by an insatiable
+					curiosity, I am constantly eager to learn 📚 and broaden my
+					understanding of various technologies 💻.
 				</p>
 				<br></br>
 				<p>
-					Currently interested in Web3.0 and Defi blockchain technology. I am
-					working towards getting AWS Cloud Practioner certified!
+					🔍 I'm deeply intrigued by Web3.0 and Defi blockchain technology 🌐.
+					I'm also diligently working towards achieving my AWS Cloud
+					Practitioner certification!
 				</p>
 			</div>
 			<div className='education-container'>
@@ -152,7 +177,7 @@ function Home2({ themeColorMode }) {
 									fontWeight: '400',
 								}}
 							>
-								Nov 2022 - Present
+								Nov 2022 - Present · {webitectMonths + 1} mos
 							</p>
 							<p
 								style={{
@@ -189,7 +214,7 @@ function Home2({ themeColorMode }) {
 									fontWeight: '400',
 								}}
 							>
-								Oct 2022 - Present
+								Oct 2022 - Present · {longPathMonths + 1} mons
 							</p>
 							<p
 								style={{
@@ -237,19 +262,20 @@ function Home2({ themeColorMode }) {
 								McLean, Virginia, United States
 							</p>
 							<p className='job-description'>
-								• Designed and built an internal web application tool that
-								displays aggregation charts for NPSL account, transaction, and
-								product information using Chart.js, Typescript, AWS DynamoDB,
-								Lambda, ALB, and S3.
+								🛠️ Developed an internal web application tool that displays
+								aggregation charts for NPSL account, transaction, and product
+								information for financial analysis and data visualization using
+								React, Chart.js, and AWS.
 							</p>
 							<p className='job-description'>
-								• Performed extraction, transformation, and batch processing on
+								📊 Performed extraction, transformation, and batch processing on
 								over 15,000 records from CDE exhaust pipeline for data
 								aggregation using Databricks and PySpark.
 							</p>
 							<p className='job-description'>
-								• Developed a DynamoDB writer using Boto3 that converts
-								dataframes to JSON objects for database storage.
+								☁️ Implemented a DynamoDB writer using Boto3 that processed and
+								converted data frames to JSON objects for database cloud
+								storage.
 							</p>
 						</div>
 					</div>
@@ -286,22 +312,18 @@ function Home2({ themeColorMode }) {
 								Manhattan, New York, United States
 							</p>
 							<p className='job-description'>
-								• Built a client-facing web dashboard application that displays
-								high-level artist information such as revenue, show times, and
-								total sales using React, Django, MongoDB, and AWS Cognito.
+								🚀 Led the development of a client-facing web dashboard
+								application that displays high-level artist information such as
+								revenue, show times, and total sales using React, Django,
+								MongoDB, and AWS Cognito.
 							</p>
 							<p className='job-description'>
-								• Refactored 2000+ lines of Javascript code to improve
-								optimization and performance by more than 60%.
+								🔧 Refactored 2000+ lines of JavaScript code to improve
+								optimization and web performance by more than 25%.
 							</p>
 							<p className='job-description'>
-								• Conducted user research and designed low and high-fidelity
-								wireframes for new features using Figma.
-							</p>
-							<p className='job-description'>
-								• Participated closely with CTO in design and planning sessions
-								to provide guidance and feedback on application and system
-								designs.
+								🎨 Conducted UX/UI research and designed 15+ low and
+								high-fidelity wireframes for new features using Figma.
 							</p>
 						</div>
 					</div>
@@ -338,19 +360,19 @@ function Home2({ themeColorMode }) {
 								Los Angeles, California, United States
 							</p>
 							<p className='job-description'>
-								• Deployed and maintained web and mobile applications across 3
+								🚀 Deployed and maintained web and mobile applications across 3
 								different platforms for residential and commercial construction
-								businesses using React and React Native
+								businesses using React and React Native.
 							</p>
 							<p className='job-description'>
-								• Integrated features for interactive blueprint planning and
+								💡 Integrated features for interactive blueprint planning and
 								design to decrease client workload by more than 70% and
 								generated an overall increase in revenue.
 							</p>
 							<p className='job-description'>
-								• Utilized K6.io to test web performance and refactored existing
-								codebase by implementing memoization and code splitting to
-								decrease application load time by 20%.
+								🔧 Utilized K6.io to test web performance and refactored
+								existing codebase by implementing memoization and code splitting
+								to decrease application load time by 20%.
 							</p>
 						</div>
 					</div>
