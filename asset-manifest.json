@@ -1,24 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.e907d740.css",
-    "main.js": "/static/js/main.f11d6ea7.js",
+    "main.css": "/static/css/main.dc6b5382.css",
+    "main.js": "/static/js/main.585db6da.js",
     "static/media/SegoeUIVF.ttf": "/static/media/SegoeUIVF.142593ecca549715e938.ttf",
     "static/media/pdf.worker.min.js": "/static/media/pdf.worker.min.2873b62712ea24dadec6.js",
-    "static/media/gtech.png": "/static/media/gtech.ece96b4176c3a2375a6d.png",
     "static/media/Wilson-Tu-Resume-2023.pdf": "/static/media/Wilson-Tu-Resume-2023.c98a5eaf37a832fb0e43.pdf",
     "static/media/Segoe-UI-Bold.ttf": "/static/media/Segoe-UI-Bold.b00928e669b804136004.ttf",
     "static/media/gtech2.png": "/static/media/gtech2.4000c2b66bcd00dae004.png",
     "static/media/csuf.png": "/static/media/csuf.90fe5ed207453431a044.png",
-    "static/media/resume.png": "/static/media/resume.81b648e12644ff710bcf.png",
     "static/media/teder.jpg": "/static/media/teder.1f72295fe0e1aefc3056.jpg",
     "static/media/gmail.png": "/static/media/gmail.d765005ce9d4caa3d69e.png",
     "static/media/c1.jpg": "/static/media/c1.eb5eacafc66beb680d80.jpg",
     "index.html": "/index.html",
-    "main.e907d740.css.map": "/static/css/main.e907d740.css.map",
-    "main.f11d6ea7.js.map": "/static/js/main.f11d6ea7.js.map"
+    "main.dc6b5382.css.map": "/static/css/main.dc6b5382.css.map",
+    "main.585db6da.js.map": "/static/js/main.585db6da.js.map"
   },
   "entrypoints": [
-    "static/css/main.e907d740.css",
-    "static/js/main.f11d6ea7.js"
+    "static/css/main.dc6b5382.css",
+    "static/js/main.585db6da.js"
   ]
 }
