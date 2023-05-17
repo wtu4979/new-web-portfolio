@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Document, Page } from 'react-pdf';
 import './styles/home2.css';
 import 'animate.css';
 import c1 from './assets/c1.jpg';
@@ -8,12 +7,10 @@ import lpt from './assets/lpt.jpeg';
 import webitect from './assets/webitect.jpeg';
 import onntek from './assets/onntek.jpg';
 import csuf from './assets/csuf.png';
-import gtech from './assets/gtech.png';
 import gtech2 from './assets/gtech2.png';
 import gmail from './assets/gmail.png';
 import linkedin from './assets/linkedin.png';
 import github from './assets/github.png';
-import resume from './assets/resume.png';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -21,11 +18,12 @@ import resumePDF from './assets/Wilson-Tu-Resume-2023.pdf';
 import { pdfjs } from 'react-pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import Button from '@mui/material/Button';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import SendIcon from '@mui/icons-material/Send';
 
 // This makes the pdf loader thing work
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -37,6 +35,8 @@ function Home2({ themeColorMode }) {
 	const [toolTipName, setToolTipName] = React.useState('Copy');
 	const [toolTipPlacement, setToolTipPlacement] = React.useState('bottom');
 	const [numPages, setNumPages] = useState(null);
+	const [email, setEmail] = useState('');
+	const [emailError, setEmailError] = useState(false);
 	const currentDate = new Date();
 	const longPathStartYear = 2022;
 	const longPathStartMonth = 10;
@@ -44,6 +44,12 @@ function Home2({ themeColorMode }) {
 	const webitectStartMonth = 11;
 	const currentYear = currentDate.getFullYear();
 	const currentMonth = currentDate.getMonth() + 1;
+
+	const handleEmailChange = (event) => {
+		setEmail(event.target.value);
+		const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+		setEmailError(!regex.test(event.target.value));
+	};
 
 	// Currently set for longpath
 	let longPathMonths;
@@ -60,6 +66,18 @@ function Home2({ themeColorMode }) {
 	webitectMonths = webitectMonths <= 0 ? 0 : webitectMonths;
 
 	const DownloadButton = styled(Button)(({ theme }) => ({
+		background: 'transparent',
+		color: '#1976d2',
+		borderRadius: '20px',
+		fontSize: '12px',
+		borderColor: 'rgba(178, 204, 239, 0.7)',
+		'&:hover': {
+			background: 'rgba(178, 204, 239, 0.15)',
+			color: '#1976d2',
+		},
+	}));
+
+	const ContactSubmitButton = styled(Button)(({ theme }) => ({
 		background: 'transparent',
 		color: '#1976d2',
 		borderRadius: '20px',
@@ -379,13 +397,71 @@ function Home2({ themeColorMode }) {
 					</div>
 				</div>
 				<div className='download-button'>
-					<DownloadButton variant='outlined' onClick={handleDownloadResume}>
-						<FileDownloadIcon /> Download Resume
+					<DownloadButton
+						variant='outlined'
+						onClick={handleDownloadResume}
+						sx={{
+							'&:hover .MuiButton-endIcon': {
+								animation: 'floating 2s infinite',
+								'@keyframes floating': {
+									'0%': { transform: 'translateY(0px)' },
+									'50%': { transform: 'translateY(-3px)' },
+									'100%': { transform: 'translateY(0px)' },
+								},
+							},
+						}}
+						endIcon={<FileDownloadIcon />}
+					>
+						Download Resume
 					</DownloadButton>
 				</div>
 			</div>
 			<div className='contact-container'>
 				<h2>📱 Contact Me</h2>
+				<Box
+					component='form'
+					sx={{
+						'& .MuiTextField-root': { m: 1, width: '100%' },
+					}}
+					noValidate
+					autoComplete='off'
+				>
+					<div class='contact-form-content'>
+						<TextField required id='outlined-required' label='Name' fullWidth />
+						<TextField
+							required
+							id='outlined-required'
+							label='Email'
+							fullWidth
+							value={email}
+							onChange={handleEmailChange}
+							error={emailError}
+							helperText={emailError ? 'Invalid email format' : ''}
+						/>
+						<TextField
+							id='outlined-multiline-static'
+							label='Message'
+							multiline
+							rows={4}
+							defaultValue=''
+							fullWidth
+						/>
+						<ContactSubmitButton
+							variant='outlined'
+							fullWidth
+							sx={{
+								ml: 1,
+								mr: 3,
+								'&:hover .MuiButton-endIcon': {
+									animation: 'wiggle 0.5s infinite',
+								},
+							}}
+							endIcon={<SendIcon />}
+						>
+							Submit
+						</ContactSubmitButton>
+					</div>
+				</Box>
 				<div className='contact-info-container'>
 					<div className='email'>
 						<img src={gmail}></img>
