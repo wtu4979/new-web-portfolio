@@ -447,11 +447,17 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-		padding-left: 4rem;
+		width: 100%;
 	}
 
 	.contact-container h2 {
 		font-size: 25px;
+		width: 100%;
+	}
+
+	.contact-info-container {
+		width: 100%;
+		margin-left: 8px;
 	}
 
 	.contact-info-container p {
@@ -460,6 +466,10 @@
 	.resume-container {
 		max-width: 100%;
 		padding: 15px;
+	}
+
+	.MuiBox-root .css-e70qmq {
+		width: 100%;
 	}
 }
 
