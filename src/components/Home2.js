@@ -130,6 +130,19 @@ function Home2({ themeColorMode }) {
     },
   }));
 
+  const BookButton = styled(Button)(({ theme }) => ({
+    background: "transparent",
+    color: "#1976d2",
+    borderRadius: "20px",
+    fontSize: "12px",
+    marginLeft: "1rem",
+    borderColor: "rgba(178, 204, 239, 0.7)",
+    "&:hover": {
+      background: "rgba(178, 204, 239, 0.15)",
+      color: "#1976d2",
+    },
+  }));
+
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
   };
