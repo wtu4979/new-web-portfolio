@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.2f4bcc36.css",
-    "main.js": "/static/js/main.25086acf.js",
+    "main.js": "/static/js/main.a3b5a33a.js",
     "static/media/SegoeUIVF.ttf": "/static/media/SegoeUIVF.142593ecca549715e938.ttf",
-    "static/media/pdf.worker.min.js": "/static/media/pdf.worker.min.06f5ed59b284d2e6d04c.js",
+    "static/media/pdf.worker.min.js": "/static/media/pdf.worker.min.e76c9a908d041d537721.js",
     "static/media/Wilson-Tu-Resume-2023.pdf": "/static/media/Wilson-Tu-Resume-2023.c98a5eaf37a832fb0e43.pdf",
     "static/media/Segoe-UI-Bold.ttf": "/static/media/Segoe-UI-Bold.b00928e669b804136004.ttf",
     "static/media/gtech2.png": "/static/media/gtech2.4000c2b66bcd00dae004.png",
@@ -13,10 +13,10 @@
     "static/media/c1.jpg": "/static/media/c1.eb5eacafc66beb680d80.jpg",
     "index.html": "/index.html",
     "main.2f4bcc36.css.map": "/static/css/main.2f4bcc36.css.map",
-    "main.25086acf.js.map": "/static/js/main.25086acf.js.map"
+    "main.a3b5a33a.js.map": "/static/js/main.a3b5a33a.js.map"
   },
   "entrypoints": [
     "static/css/main.2f4bcc36.css",
-    "static/js/main.25086acf.js"
+    "static/js/main.a3b5a33a.js"
   ]
 }
